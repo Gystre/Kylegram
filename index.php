@@ -7,6 +7,7 @@
     <title>Kylegram</title>
 </head>
 <body>
+    <h1>Welcome to Kylegram!</h1>
     <form method="post"> 
         <input type="text" placeholder="User Name" value="<?php echo htmlspecialchars(isset($_POST['name'])?$_POST['name']:''); ?>" name="name"> <span style="color: red;">* (4-15 characters)</span>
         <br>
