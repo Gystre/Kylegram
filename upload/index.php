@@ -90,8 +90,8 @@ if(!isset($_SESSION['name'])){
                     $desc = htmlspecialchars($_POST['description']);
                     
                     //adding to image table and creating new table for image comments
-                    $stmt = mysqli_prepare($link, "insert into images (author, name, encodedname, description, imgdir) values (?, ?, ?, ?, ?)");
-                    $stmt->bind_param("sssss", $_SESSION['name'], $name, $encodedName, $desc, $movDir);
+                    $stmt = mysqli_prepare($link, "insert into images (author, name, encodedname, description, imgdir, created) values (?, ?, ?, ?, ?, ?)");
+                    $stmt->bind_param("ssssss", $_SESSION['name'], $name, $encodedName, $desc, $movDir, date("Y-m-d H:i:s"));
                     $stmt->execute();
                     $stmt->close();
 

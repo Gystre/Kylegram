@@ -22,5 +22,5 @@ create table images (
 `description` varchar(255) not null default '',
 `likes` int unsigned not null default '0',
 `imgdir` varchar(255) not null,
-`created` timestamp
+`created` datetime
 )
